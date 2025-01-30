@@ -1,0 +1,28 @@
+{
+"compilerOptions": {                // Output JavaScript target
+    "module": "commonjs", 
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "jsx": "react-jsx",               // Use ES modules          // Use Node module resolution strategy              // Enable interoperability for CommonJS and ES Modules
+    "outDir": "./out",                     // Compiled JavaScript will go to 'out'
+    "rootDir": "./src",                    // The root directory of the source code
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"                         // Include all TS files in the src directory
+  ],
+  "exclude": [
+    "node_modules"                         // Exclude node_modules folder
+  ]
+}

@@ -1,0 +1,249 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--vscode-font-family);
+  color: var(--vscode-editor-foreground);
+  background-color: var(--vscode-editor-background);
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.message {
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.response-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+.response-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.user-message {
+  background-color: var(--vscode-textBlockQuote-background);
+  margin-left: 20%;
+}
+
+.assistant-message {
+  background-color: var(--vscode-editor-inactiveSelectionBackground);
+  margin-right: 20%;
+}
+
+.message.assistant-message {
+  background-color: #e0f7fa;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 8px 0;
+  color: #00796b;
+  font-style: italic;
+  font-size: 14px;
+  align-self: flex-start;
+}
+
+.message.user-message {
+  background-color: #c8e6c9;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 8px 0;
+  color: #1b5e20;
+  font-size: 14px;
+  max-width: 80%;
+  align-self: flex-end;
+}
+
+.message.system-message {
+  background-color: #ffcdd2;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 8px 0;
+  color: #e37933;
+  font-weight: bold;
+  position: fixed;
+  max-width: 80%;
+  align-self: center;
+  animation: hideMessage 4.5s forwards;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-bottom: 16px;
+  gap: 5px;
+  overflow-y: auto;
+  height: 80vh;
+  padding: 10px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.input-container {
+  display: flex;
+  gap: 8px;
+}
+
+input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid var(--vscode-input-border);
+  background-color: var(--vscode-input-background);
+  color: var(--vscode-input-foreground);
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: var(--vscode-button-background);
+  color: var(--vscode-button-foreground);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--vscode-button-hoverBackground);
+}
+
+.error-container {
+  color: var(--vscode-errorForeground);
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  background-color: var(--vscode-inputValidation-errorBackground);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-family: var(--vscode-font-family);
+  display: block;
+  margin-bottom: 5px;
+  color: black;
+  font-weight: 500;
+}
+
+.message p {
+  margin: 8px 0;
+}
+
+.message ul,
+.message ol {
+  margin: 8px 0;
+  padding-left: 24px;
+}
+
+.message li {
+  margin: 4px 0;
+}
+
+.message strong {
+  font-weight: 600;
+}
+
+.message em {
+  font-style: italic;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+.submit-job-btn {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  border: 2px solid #4CAF50;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 200px;
+}
+
+.submit-job-btn:hover {
+  background-color: #45a049;
+}
+
+.error-field {
+  border-color: red !important;
+  background-color: #fff0f0;
+}
+
+@keyframes hideMessage {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
