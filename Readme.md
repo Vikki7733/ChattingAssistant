@@ -1,6 +1,6 @@
-# qBraid Chat Assistant
+# Chat Assistant
 
-Welcome to the qBraid Chating Assistant! 
+Welcome to the Chating Assistant! 
 
 The idea is to create chat assistant that can help users to interact with an AI model (gpt-4o & gpt-4o-mini). Users can interact and send general prompts to the chat agent to experience real-time communication. Additionally, users can create a quantum job - Submit a quantum job for execution on a simulator or QPU. Users can also find the list of quantum devices available and fetch the list of submitted jobs. 
 
